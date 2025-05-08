@@ -23,3 +23,11 @@ def test_inventory_add_product(empty_inventory):
     updated_status = inventory.add_product(product3)
     assert updated_status == {"Apple": 15, "Banana": 8}
     assert inventory.get_inventory_products_status() == {"Apple": 15, "Banana": 8}
+
+def test_inventory_remove_product(filled_inventory):
+    # Remove "Banana" product
+    updated_products = filled_inventory.remove_product("Banana")
+    # Verify "Banana" product removed
+    assert "Banana" not in updated_products
+    # Verify "Apple" product still in dict
+    assert updated_products == {'Apple': 25, "pineapple": 37.2}
