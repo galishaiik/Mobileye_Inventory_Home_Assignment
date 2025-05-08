@@ -17,6 +17,14 @@ class Inventory:
             self.products[product.name] = product.amount
         return self.products
 
+    def remove_product(self, product_name: str):
+        if product_name in self.products.keys():
+            del self.products[product_name]
+            return self.products
+        else:
+            print(f'{product_name} not exists in inventory to delete')
+            return self.products
+
 
 inventory = Inventory()
 inventory.add_product(Product("Apple", 5.0))
