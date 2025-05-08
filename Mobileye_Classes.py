@@ -16,3 +16,10 @@ class Inventory:
         else:
             self.products[product.name] = product.amount
         return self.products
+
+
+inventory = Inventory()
+inventory.add_product(Product("Apple", 5.0))
+inventory.add_product(Product("Apple", 10.0))
+inventory.add_product(Product("Banana", 15.0))
+inventory.add_product(Product("pineapple", 45.0))
