@@ -25,6 +25,12 @@ class Inventory:
             print(f'{product_name} not exists in inventory to delete')
             return self.products
 
+    def get_product(self, product_name: str):
+        if product_name in self.products.keys():
+            return product_name, self.products[product_name]
+        else:
+            return product_name, 0
+
 
 inventory = Inventory()
 inventory.add_product(Product("Apple", 5.0))
