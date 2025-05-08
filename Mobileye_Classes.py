@@ -31,6 +31,10 @@ class Inventory:
         else:
             return product_name, 0
 
+    def total_inventory_value(self) -> float:
+        total_inventory_amount = sum(self.products.values())
+        return total_inventory_amount
+
 
 inventory = Inventory()
 inventory.add_product(Product("Apple", 5.0))
