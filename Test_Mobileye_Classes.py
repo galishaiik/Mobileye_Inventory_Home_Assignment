@@ -41,3 +41,8 @@ def test_get_nonexistent_product(filled_inventory):
     name, amount = filled_inventory.get_product("Juice")
     assert name == "Juice"
     assert amount == 0
+
+def test_total_inventory_value_with_products(filled_inventory):
+    # Verify filled inventory value calculation
+    total = filled_inventory.total_inventory_value()
+    assert total == 77.2
