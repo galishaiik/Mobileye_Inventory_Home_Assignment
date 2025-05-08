@@ -35,7 +35,6 @@ class Inventory:
         total_inventory_amount = sum(self.products.values())
         return total_inventory_amount
 
-
 inventory = Inventory()
 inventory.add_product(Product("Apple", 5.0))
 inventory.add_product(Product("Apple", 10.0))
@@ -45,5 +44,3 @@ Inventory_dict = inventory.remove_product("Banana")
 print(Inventory_dict)
 product_name, product_amount = inventory.get_product("Banana")
 print(f'{product_name} product amount in inventory is {product_amount}')
-Inventory_amount = inventory.total_inventory_value()
-print(f'Inventory total amount is {Inventory_amount}')
