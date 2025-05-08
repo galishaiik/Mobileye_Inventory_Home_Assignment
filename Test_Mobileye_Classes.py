@@ -36,3 +36,8 @@ def test_get_existing_product(filled_inventory):
     name, amount = filled_inventory.get_product("pineapple")
     assert name == "pineapple"
     assert amount == 37.2
+
+def test_get_nonexistent_product(filled_inventory):
+    name, amount = filled_inventory.get_product("Juice")
+    assert name == "Juice"
+    assert amount == 0
