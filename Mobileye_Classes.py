@@ -6,3 +6,6 @@ class Product:
 class Inventory:
     def __init__(self):
         self.products = {}
+
+    def get_inventory_products_status(self):
+        return self.products
